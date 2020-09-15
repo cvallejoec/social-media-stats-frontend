@@ -8,7 +8,11 @@ const Toggle = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <div className="toggle">
       <p>Dark Mode</p>
-      <input type="checkbox" onChange={() => toggleColorMode()} />
+      <input
+        type="checkbox"
+        onChange={() => toggleColorMode()}
+        checked={isDarkMode}
+      />
     </div>
   );
 };

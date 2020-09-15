@@ -8,7 +8,9 @@ import SmallCard from './components/SmallCard.jsx';
 export const SocialData = createContext();
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
 
   const [state, setState] = useState({
     loading: true,
