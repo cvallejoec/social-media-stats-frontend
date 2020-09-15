@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
+
+import Test from './components/Test.jsx';
+
+export const SocialData = createContext();
 
 function App() {
+  const [state, setState] = useState({
+    loading: true,
+    data: {},
+    error: '',
+  });
+
+  useEffect(() => {
+    axios
+      .get('https://social-media-stats-backend.cvallejoec.vercel.app')
+      .then((result) => {
+        setState({
+          loading: false,
+          data: result.data,
+          error: '',
+        });
+      })
+      .catch((err) => {
+        setState({
+          loading: false,
+          data: {},
+          error: err,
+        });
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SocialData.Provider value={state}>
+      <div className="App">
+        <h1>Mi primera app con Context</h1>
+        <Test />
+      </div>
+    </SocialData.Provider>
   );
 }
 
