@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/social-media-stats-frontend/static/css/main.29523803.chunk.css",
-    "main.js": "/social-media-stats-frontend/static/js/main.3913e5b6.chunk.js",
-    "main.js.map": "/social-media-stats-frontend/static/js/main.3913e5b6.chunk.js.map",
+    "main.css": "/social-media-stats-frontend/static/css/main.519f59dc.chunk.css",
+    "main.js": "/social-media-stats-frontend/static/js/main.7eda0275.chunk.js",
+    "main.js.map": "/social-media-stats-frontend/static/js/main.7eda0275.chunk.js.map",
     "runtime-main.js": "/social-media-stats-frontend/static/js/runtime-main.778fe687.js",
     "runtime-main.js.map": "/social-media-stats-frontend/static/js/runtime-main.778fe687.js.map",
-    "static/js/2.7ab02e2a.chunk.js": "/social-media-stats-frontend/static/js/2.7ab02e2a.chunk.js",
-    "static/js/2.7ab02e2a.chunk.js.map": "/social-media-stats-frontend/static/js/2.7ab02e2a.chunk.js.map",
+    "static/js/2.a3f4fc83.chunk.js": "/social-media-stats-frontend/static/js/2.a3f4fc83.chunk.js",
+    "static/js/2.a3f4fc83.chunk.js.map": "/social-media-stats-frontend/static/js/2.a3f4fc83.chunk.js.map",
     "index.html": "/social-media-stats-frontend/index.html",
-    "precache-manifest.0c4786c4edacdf36daf3c400048fac4b.js": "/social-media-stats-frontend/precache-manifest.0c4786c4edacdf36daf3c400048fac4b.js",
+    "precache-manifest.25000cd350fb6f604dafe9480f3def09.js": "/social-media-stats-frontend/precache-manifest.25000cd350fb6f604dafe9480f3def09.js",
     "service-worker.js": "/social-media-stats-frontend/service-worker.js",
-    "static/css/main.29523803.chunk.css.map": "/social-media-stats-frontend/static/css/main.29523803.chunk.css.map",
-    "static/js/2.7ab02e2a.chunk.js.LICENSE.txt": "/social-media-stats-frontend/static/js/2.7ab02e2a.chunk.js.LICENSE.txt",
+    "static/css/main.519f59dc.chunk.css.map": "/social-media-stats-frontend/static/css/main.519f59dc.chunk.css.map",
+    "static/js/2.a3f4fc83.chunk.js.LICENSE.txt": "/social-media-stats-frontend/static/js/2.a3f4fc83.chunk.js.LICENSE.txt",
     "static/media/icon-down.svg": "/social-media-stats-frontend/static/media/icon-down.69a5c77f.svg",
     "static/media/icon-facebook.svg": "/social-media-stats-frontend/static/media/icon-facebook.a7383764.svg",
     "static/media/icon-instagram.svg": "/social-media-stats-frontend/static/media/icon-instagram.991487fe.svg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.778fe687.js",
-    "static/js/2.7ab02e2a.chunk.js",
-    "static/css/main.29523803.chunk.css",
-    "static/js/main.3913e5b6.chunk.js"
+    "static/js/2.a3f4fc83.chunk.js",
+    "static/css/main.519f59dc.chunk.css",
+    "static/js/main.7eda0275.chunk.js"
   ]
 }

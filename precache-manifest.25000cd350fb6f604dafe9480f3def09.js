@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf97f132c25b5d24973e42e19f7d295d",
+    "revision": "455e319d41ac6630c6b70f8773c95302",
     "url": "/social-media-stats-frontend/index.html"
   },
   {
-    "revision": "85452476728acb743aa3",
-    "url": "/social-media-stats-frontend/static/css/main.29523803.chunk.css"
+    "revision": "efdc3d52ec5bbecbe486",
+    "url": "/social-media-stats-frontend/static/css/main.519f59dc.chunk.css"
   },
   {
-    "revision": "3c462b77979b98a3a608",
-    "url": "/social-media-stats-frontend/static/js/2.7ab02e2a.chunk.js"
+    "revision": "e10b40d63bad71822860",
+    "url": "/social-media-stats-frontend/static/js/2.a3f4fc83.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/social-media-stats-frontend/static/js/2.7ab02e2a.chunk.js.LICENSE.txt"
+    "url": "/social-media-stats-frontend/static/js/2.a3f4fc83.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85452476728acb743aa3",
-    "url": "/social-media-stats-frontend/static/js/main.3913e5b6.chunk.js"
+    "revision": "efdc3d52ec5bbecbe486",
+    "url": "/social-media-stats-frontend/static/js/main.7eda0275.chunk.js"
   },
   {
     "revision": "5b2c40228cb0fe2a0056",
