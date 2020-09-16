@@ -1,11 +1,11 @@
 import React from 'react';
 
+import useRoundedValue from '../hooks/useRoundedValue';
 import IconFacebook from '../assets/images/icon-facebook.svg';
 import IconTwitter from '../assets/images/icon-twitter.svg';
 import IconInstagram from '../assets/images/icon-instagram.svg';
 import IconYouTube from '../assets/images/icon-youtube.svg';
-import UpArrow from '../assets/images/icon-up.svg';
-import DownArrow from '../assets/images/icon-down.svg';
+import Stats from './Stats.jsx';
 
 const BigCard = ({
   socialNetwork,
@@ -42,26 +42,20 @@ const BigCard = ({
               ? IconYouTube
               : null
           }
-          alt="icon-facebook"
+          alt="icon"
         />
         <span>@{username}</span>
       </div>
       <div className="card__hero">
-        <p className="card__hero-number">{followers}</p>
+        <p className="card__hero-number">{useRoundedValue(followers, 0)}</p>
         <p className="card__hero-description">
           {socialNetwork === 'youtube' ? 'subscribers' : 'followers'}
         </p>
       </div>
-      <div
-        className={
-          todayStatsType === 'increase'
-            ? 'card__stats card__stats-up'
-            : 'card__stats card__stats-down'
-        }
-      >
-        <img src={todayStatsType === 'increase' ? UpArrow : DownArrow} alt="" />
-        <p>{todayStats} Today</p>
-      </div>
+      <Stats
+        todayStatsType={todayStatsType}
+        description={`${todayStats} Today`}
+      />
     </div>
   );
 };

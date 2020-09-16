@@ -37,7 +37,8 @@ body {
 
 .App {
   background-color: var(--bg);
-  height: 100vh;
+  /* height: 100vh; */
+  padding-bottom: 100px;
 }
 
 .header {
@@ -78,7 +79,7 @@ body {
 }
 
 .container {
-  margin-top: -100px;
+  margin-top: -150px;
   /* position: relative;
   top: 800px; */
 }
@@ -168,6 +169,47 @@ body {
 .card__stats img {
   width: 12px;
   margin-right: 8px;
+}
+
+.card__stats p {
+  margin: 0;
+}
+
+.overview__title {
+  color: var(--text-two);
+  font-size: 28px;
+  margin: 40px 0 20px 0;
+}
+
+.small-card {
+  background-color: var(--card-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* justify-content: space-between; */
+  align-items: center;
+  justify-items: flex-end;
+  border-radius: 8px;
+  padding: 20px 30px;
+}
+
+.small-card__left {
+  justify-self: flex-start;
+}
+
+.small-card__bottom {
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+
+.small-card__title {
+  color: var(--text-one);
+}
+
+.small-card__number {
+  color: var(--text-two);
+  font-weight: 700;
+  font-size: 46px;
+  margin: 0;
 }
 
 @media screen and (min-width: 480px) {
