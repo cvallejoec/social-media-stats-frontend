@@ -37,8 +37,28 @@ body {
 
 .App {
   background-color: var(--bg);
-  /* height: 100vh; */
   padding-bottom: 100px;
+}
+
+.loading {
+  background-color: var(--bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.loading img {
+  animation: spin 2s linear infinite;
+  width: 100px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .header {
@@ -74,12 +94,6 @@ body {
   color: var(--text-one);
   margin: 0;
 }
-
-/* .header__divisor {
-  margin: 20px 0;
-  border-color: var(--text-one);
-  height: 1px;
-} */
 
 .toggle {
   display: flex;

@@ -1,10 +1,10 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Loading from './components/Loading.jsx';
 import Toggle from './components/Toggle.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Overview from './components/Overview.jsx';
-import SmallCard from './components/SmallCard.jsx';
 
 export const SocialData = createContext();
 
@@ -43,7 +43,7 @@ function App() {
   return (
     <SocialData.Provider value={state}>
       {state.loading ? (
-        <p>Loading</p>
+        <Loading />
       ) : (
         <div
           className={
