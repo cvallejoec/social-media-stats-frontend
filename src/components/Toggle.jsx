@@ -9,7 +9,6 @@ const Toggle = ({ isDarkMode, setIsDarkMode }) => {
     <div className="toggle">
       <label htmlFor="is-dark-mode">Dark Mode</label>
       <input
-        // name="is-dark-mode"
         id="is-dark-mode"
         type="checkbox"
         onChange={() => toggleColorMode()}
