@@ -57,6 +57,7 @@ function App() {
                 <p className="header__description">
                   Total Followers: <span>23.004</span>
                 </p>
+                {/* <hr className="header__divisor" /> */}
               </div>
               <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             </div>
