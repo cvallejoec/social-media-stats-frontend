@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Toggle from './components/Toggle.jsx';
+import Dashboard from './components/Dashboard.jsx';
 import BigCard from './components/BigCard.jsx';
 import SmallCard from './components/SmallCard.jsx';
 
@@ -11,6 +12,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(
     () => window.matchMedia('(prefers-color-scheme: dark)').matches
   );
+  // const [data, setData] = useState({});
 
   const [state, setState] = useState({
     loading: true,
@@ -22,9 +24,10 @@ function App() {
     axios
       .get('https://social-media-stats-backend.cvallejoec.vercel.app')
       .then((result) => {
+        // setData(result.data);
         setState({
           loading: false,
-          data: result.data,
+          data: result.data.data,
           error: '',
         });
       })
@@ -39,41 +42,47 @@ function App() {
 
   let appClass = 'App ';
 
+  // var facebook = state.data.facebook;
+  // var twitter = state.data.twitter;
+  // var instagram = state.data.instagram;
+  // var youtube = state.data.youtube;
+
   return (
     <SocialData.Provider value={state}>
-      <div
-        className={
-          isDarkMode ? appClass + 'is-dark-mode' : appClass + 'is-light-mode'
-        }
-      >
-        {/* <div
-        className="ais-dark-mode"
-      > */}
-        <header className="header">
-          <div className="wrapper">
-            <div className="header__title-container">
-              <h1 className="header__title">Social Media Dashboard</h1>
-              <p className="header__description">
-                Total Followers: <span>23.004</span>
-              </p>
+      {state.loading ? (
+        <p>Loading</p>
+      ) : (
+        <div
+          className={
+            isDarkMode ? appClass + 'is-dark-mode' : appClass + 'is-light-mode'
+          }
+        >
+          <header className="header">
+            <div className="wrapper">
+              <div className="header__title-container">
+                <h1 className="header__title">Social Media Dashboard</h1>
+                <p className="header__description">
+                  Total Followers: <span>23.004</span>
+                </p>
+              </div>
+              <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             </div>
-            <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-          </div>
-        </header>
-        <div>
-          <BigCard />
-          <BigCard />
-          <BigCard />
+          </header>
+          <section className="container">
+            <div className="wrapper">
+              <Dashboard />
+              <div>
+                <h2>Overview - Today</h2>
+                <div>
+                  <SmallCard />
+                  <SmallCard />
+                  <SmallCard />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div>
-          <h2>Overview - Today</h2>
-          <div>
-            <SmallCard />
-            <SmallCard />
-            <SmallCard />
-          </div>
-        </div>
-      </div>
+      )}
     </SocialData.Provider>
   );
 }
